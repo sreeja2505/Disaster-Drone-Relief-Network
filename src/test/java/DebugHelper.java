@@ -55,8 +55,9 @@ public class DebugHelper {
                 i++;
             } else {
                 if (len != 0) {
+                    int prevLen = len;
                     len = lps[len - 1];
-                    System.out.println("    No match, backtrack: len = lps[" + (len + 1) + "] = " + len);
+                    System.out.println("    No match, backtrack: len = lps[" + (prevLen - 1) + "] = " + len);
                 } else {
                     lps[i] = 0;
                     System.out.println("    No match, len=0: lps[" + i + "] = 0");
